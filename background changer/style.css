@@ -6,16 +6,26 @@
 
 body{
   width: 100vw;
-  height: 100vh;
-  background: red;
+  height: 100vh;  
+}
+
+.container{
   display: flex;
+  flex-direction: column;
+  width: inherit;
+  height: inherit;
   justify-content: center;
   align-items: center;
 }
 
+
+
 .btn-change{
-  font-size: 22px;
-  padding: 5px;
+  font-size: 16px;
+  padding: 5px 10px;
+  border:2px solid #ccc;
+  border-radius: 10px;
+  
 }
 
 .btn-change:focus{
