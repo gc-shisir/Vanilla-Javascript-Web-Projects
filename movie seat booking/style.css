@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --background-color:#242333;
+    --seat-color:#444451;
+    --selected-color:#6faef6;
+
+}
+
+body{
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color:#fff;
+}
+
+.movie-container{
+    margin: 15px 0;
+}
+
+.movie-container select{
+    background-color:#fff;
+    border: 0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0 10px;
+}
+
+.container{
+    perspective: 1000px;
+    margin-bottom: 20px;
+}
+
+
+.seat{
+    height: 15px;
+    width:15px;
+    background-color: var(--seat-color);
+    margin: 5px 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.seat.selected{
+    background-color: var(--selected-color);
+}
+
+.seat.occupied{
+    background-color: #fff;
+}
+
+.row{
+    display: flex;
+}
+
+/* To make gaps between two columns */
+.seat:nth-of-type(2){
+    margin-right: 20px;
+}
+
+.seat:nth-last-child(2){
+    margin-left: 20px;
+}
+
+.seat:not(.occupied):hover{
+    cursor: pointer;
+    transform: scale(1.3);
+}
+
+.showcase .seat:not(.occupied):hover{
+    cursor: default;
+    transform:scale(1);
+}
+
+.showcase{
+    background: rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 12px;
+}
+
+.showcase li{
+    list-style: none;
+    display: flex;
+}
+
+.showcase li small{
+    font-size: 14px;
+    margin: 0 3px;
+    margin-top: 5px;
+}
+
+.screen{
+    height: 70px;
+    width: 200px;
+    margin: 10px 0;
+    background: #fff;
+    clip-path: polygon(10% 0%,90% 0,100% 100%,0% 100%);
+    box-shadow:0 3px 10px rgba(255,0255,0255,0.7);
+    
+}
+
+.text span{
+    color:var(--selected-color);
+    font-size: 22px;
+}
+
+

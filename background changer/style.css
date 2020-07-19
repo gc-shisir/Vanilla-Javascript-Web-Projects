@@ -1,0 +1,35 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  background: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-change{
+  font-size: 22px;
+  padding: 5px;
+}
+
+.btn-change:focus{
+  outline: none;
+}
+
+.color-text{
+  text-align: center;
+  margin: 10px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+
+
+
+
